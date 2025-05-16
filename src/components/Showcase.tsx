@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import useMousePosition from "@/utils/hooks/useMousePosition";
-import { ShowCaseDetails } from "@/components/ui/ShowCaseDetails";
-import { MaskShowCaseDetails } from "@/components/ui/MaskShowCaseDetails";
+import useMousePosition from "@/hooks/useMousePosition";
+import { ShowcaseDetails } from "@/components/ui/ShowcaseDetails";
+import {
+  SHOWCASE_DETAILS_NAME_SUMMARY,
+  SHOWCASE_DETAILS_ROLE_SUMMARY,
+} from "@/data/showcaseDetails";
 
-export const ShowCase = () => {
+export const Showcase = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 320 : 0;
@@ -28,14 +31,20 @@ export const ShowCase = () => {
           pointerEvents: "none",
         }}
       >
-        <MaskShowCaseDetails />
+        <ShowcaseDetails
+          nameOrRole={SHOWCASE_DETAILS_ROLE_SUMMARY.nameOrRole}
+          summary={SHOWCASE_DETAILS_ROLE_SUMMARY.summary}
+        />
       </motion.div>
       <div
         className="w-full h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <ShowCaseDetails />
+        <ShowcaseDetails
+          nameOrRole={SHOWCASE_DETAILS_NAME_SUMMARY.nameOrRole}
+          summary={SHOWCASE_DETAILS_NAME_SUMMARY.summary}
+        />
       </div>
     </section>
   );

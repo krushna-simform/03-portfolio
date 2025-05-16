@@ -1,11 +1,11 @@
 import { Header } from "@/components/Header";
-import { ShowCase } from "@/components/ShowCase";
+import { Showcase } from "@/components/Showcase";
 
 const Main = () => {
   return (
     <>
       <Header />
-      <ShowCase />
+      <Showcase />
     </>
   );
 };
