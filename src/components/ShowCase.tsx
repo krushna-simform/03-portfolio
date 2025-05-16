@@ -4,7 +4,7 @@ import useMousePosition from "@/utils/hooks/useMousePosition";
 import { ShowCaseDetails } from "@/components/ui/ShowCaseDetails";
 import { MaskShowCaseDetails } from "@/components/ui/MaskShowCaseDetails";
 
-const ShowCase = () => {
+export const ShowCase = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 320 : 0;
@@ -40,5 +40,3 @@ const ShowCase = () => {
     </section>
   );
 };
-
-export default ShowCase;
