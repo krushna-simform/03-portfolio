@@ -2,10 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePosition";
 import { ShowcaseDetails } from "@/components/ui/ShowcaseDetails";
-import {
-  SHOWCASE_DETAILS_NAME_SUMMARY,
-  SHOWCASE_DETAILS_ROLE_SUMMARY,
-} from "@/data/showcaseDetails";
+import { SHOWCASE_DETAILS_TITLE_SUMMARY } from "@/data/showcaseDetails";
 
 export const Showcase = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -31,20 +28,14 @@ export const Showcase = () => {
           pointerEvents: "none",
         }}
       >
-        <ShowcaseDetails
-          title={SHOWCASE_DETAILS_ROLE_SUMMARY.title}
-          summary={SHOWCASE_DETAILS_ROLE_SUMMARY.summary}
-        />
+        <ShowcaseDetails {...SHOWCASE_DETAILS_TITLE_SUMMARY[1]} />
       </motion.div>
       <div
         className="w-full h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <ShowcaseDetails
-          title={SHOWCASE_DETAILS_NAME_SUMMARY.title}
-          summary={SHOWCASE_DETAILS_NAME_SUMMARY.summary}
-        />
+        <ShowcaseDetails {...SHOWCASE_DETAILS_TITLE_SUMMARY[0]} />
       </div>
     </section>
   );
