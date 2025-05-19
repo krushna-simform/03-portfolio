@@ -1,6 +1,6 @@
-import type { NavbarLinkType } from "@/types/types";
+import type { NavbarLink } from "@/types/types";
 
-const navbarLinks: Array<NavbarLinkType> = [
+const navbarLinks: Array<NavbarLink> = [
   {
     label: "Skills",
     href: "#skills",

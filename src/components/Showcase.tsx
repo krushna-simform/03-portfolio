@@ -32,7 +32,7 @@ export const Showcase = () => {
         }}
       >
         <ShowcaseDetails
-          nameOrRole={SHOWCASE_DETAILS_ROLE_SUMMARY.nameOrRole}
+          title={SHOWCASE_DETAILS_ROLE_SUMMARY.title}
           summary={SHOWCASE_DETAILS_ROLE_SUMMARY.summary}
         />
       </motion.div>
@@ -42,7 +42,7 @@ export const Showcase = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <ShowcaseDetails
-          nameOrRole={SHOWCASE_DETAILS_NAME_SUMMARY.nameOrRole}
+          title={SHOWCASE_DETAILS_NAME_SUMMARY.title}
           summary={SHOWCASE_DETAILS_NAME_SUMMARY.summary}
         />
       </div>
