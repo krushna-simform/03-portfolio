@@ -2,14 +2,17 @@ import type { NavbarLink } from "@/types/types";
 
 const navbarLinks: Array<NavbarLink> = [
   {
+    id: 1,
     label: "Skills",
     href: "#skills",
   },
   {
+    id: 2,
     label: "Education",
     href: "#education",
   },
   {
+    id: 3,
     label: "Projects",
     href: "#projects",
   },
@@ -27,7 +30,7 @@ export const Header = () => {
             {navbarLinks.map((navLinks) => (
               <li
                 className="py-[11px] hover:border-b-1 cursor-pointer"
-                key={navLinks.label}
+                key={navLinks.id}
               >
                 <a href={navLinks.href} role="button">
                   {navLinks.label}
