@@ -1,11 +1,11 @@
-interface NavbarLinkType {
+interface NavbarLink {
   label: string;
   href: string;
 }
 
-interface ShowcaseDetailsType {
-  nameOrRole: string;
+interface ShowcaseDetails {
+  title: string;
   summary: string;
 }
 
-export type { NavbarLinkType, ShowcaseDetailsType };
+export type { NavbarLink, ShowcaseDetails };
