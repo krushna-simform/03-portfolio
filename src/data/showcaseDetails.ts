@@ -1,6 +1,6 @@
 import type { ShowcaseDetails } from "@/types/types";
 
-const SHOWCASE_DETAILS_TITLE_SUMMARY: Array<ShowcaseDetails> = [
+const SHOWCASE_DETAILS: Array<ShowcaseDetails> = [
   {
     title: "Krushna Rathod",
     summary:
@@ -13,4 +13,4 @@ const SHOWCASE_DETAILS_TITLE_SUMMARY: Array<ShowcaseDetails> = [
   },
 ];
 
-export { SHOWCASE_DETAILS_TITLE_SUMMARY };
+export { SHOWCASE_DETAILS };
