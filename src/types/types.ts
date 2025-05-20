@@ -9,4 +9,10 @@ interface ShowcaseDetails {
   summary: string;
 }
 
-export type { NavbarLink, ShowcaseDetails };
+interface Skills {
+  name: string;
+  path: string;
+  url: string;
+}
+
+export type { NavbarLink, ShowcaseDetails, Skills };
