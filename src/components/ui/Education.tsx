@@ -10,7 +10,9 @@ export const Education = ({
   return (
     <div className="flex flex-col justify-center space-y-2">
       <div className="space-y-2">
-        <p className="text-2xl">{course}</p>
+        <p className="text-2xl" role="heading">
+          {course}
+        </p>
         <div>
           <p className="text-lg">{`${institute}, ${city}`}</p>
         </div>
