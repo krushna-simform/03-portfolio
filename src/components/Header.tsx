@@ -8,8 +8,8 @@ const navbarLinks: Array<NavbarLink> = [
   },
   {
     id: 2,
-    label: "Education",
-    href: "#education",
+    label: "About",
+    href: "#about",
   },
   {
     id: 3,
