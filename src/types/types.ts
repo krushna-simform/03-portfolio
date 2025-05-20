@@ -15,4 +15,12 @@ interface Skills {
   url: string;
 }
 
-export type { NavbarLink, ShowcaseDetails, Skills };
+interface Education {
+  course: string;
+  institute: string;
+  city: string;
+  from: number;
+  to: number;
+}
+
+export type { NavbarLink, ShowcaseDetails, Skills, Education };
