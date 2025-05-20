@@ -4,9 +4,10 @@ import { Education } from "@/components/ui/Education";
 import { EXPERIENCE } from "@/data/experience";
 import { Experience } from "@/components/ui/Experience";
 
+import { Hobbies } from "@/components/ui/Hobbies";
+
 import educationImage from "/images/education.svg";
 import experienceImage from "/images/experience.png";
-import { Hobbies } from "./ui/Hobbies";
 
 export const About = () => {
   return (
