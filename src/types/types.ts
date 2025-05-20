@@ -23,4 +23,13 @@ interface Education {
   to: number;
 }
 
-export type { NavbarLink, ShowcaseDetails, Skills, Education };
+interface Experience {
+  company: string;
+  role: string;
+  description: string;
+  city: string;
+  from: string;
+  to: string;
+}
+
+export type { NavbarLink, ShowcaseDetails, Skills, Education, Experience };
