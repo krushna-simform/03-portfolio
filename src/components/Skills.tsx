@@ -6,7 +6,9 @@ export const Skills = () => {
     <div id="skills">
       <div className="md:w-[60%] px-4 mx-auto mt-20">
         <Tagline />
-        <p className="text-[40px] font-bold mt-20">Skills</p>
+        <p className="text-[40px] font-bold mt-20" role="heading">
+          Skills
+        </p>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-10 mt-10">
           {SKILLS.map((skill) => (
             <a
