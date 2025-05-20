@@ -6,6 +6,7 @@ import { Experience } from "@/components/ui/Experience";
 
 import educationImage from "/images/education.svg";
 import experienceImage from "/images/experience.png";
+import { Hobbies } from "./ui/Hobbies";
 
 export const About = () => {
   return (
@@ -57,6 +58,8 @@ export const About = () => {
             </div>
           </div>
         </div>
+
+        <Hobbies />
       </div>
     </div>
   );
