@@ -10,9 +10,9 @@ import { Hobbies } from "./ui/Hobbies";
 
 export const About = () => {
   return (
-    <div id="education">
+    <div id="about">
       <div className="md:w-[60%] px-4 mx-auto">
-        <div className="flex justify-between mt-30">
+        <div className="flex justify-between pt-30">
           <div className="space-y-8">
             <p className="text-4xl font-bold" role="heading">
               Education
