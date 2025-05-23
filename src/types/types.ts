@@ -10,6 +10,7 @@ interface ShowcaseDetails {
 }
 
 interface Skills {
+  id: string;
   name: string;
   path: string;
   url: string;
@@ -22,11 +23,13 @@ interface CityTimeRange {
 }
 
 interface Education extends CityTimeRange {
+  id: string;
   course: string;
   institute: string;
 }
 
 interface Experience extends CityTimeRange {
+  id: string;
   company: string;
   role: string;
   description: string;
