@@ -124,6 +124,6 @@ const PROJECT: Array<Project> = [
     liveLink: "https://tictactoe-with-js.netlify.app",
     techStack: ["React"],
   },
-];
+] as const;
 
 export { PROJECT };
