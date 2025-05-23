@@ -17,7 +17,7 @@ export const Hobbies = () => {
         </ul>
       </div>
       <div className="hidden lg:block lg:w-[500px]">
-        <img src={hobbiesImage} alt="" />
+        <img src={hobbiesImage} alt="Hobbies Image" />
       </div>
     </div>
   );
