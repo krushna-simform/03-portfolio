@@ -19,6 +19,6 @@ const EXPERIENCE: Array<Experience> = [
     from: "May 2024",
     to: "June 2024",
   },
-];
+] as const;
 
 export { EXPERIENCE };
