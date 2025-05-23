@@ -1,13 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 
+const ROWS = 8;
+const COLS = 39;
+const SPACING = 30;
+
 export const LineAttractor = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [isInside, setIsInside] = useState(false);
-
-  const ROWS = 8;
-  const COLS = 39;
-  const SPACING = 30;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
