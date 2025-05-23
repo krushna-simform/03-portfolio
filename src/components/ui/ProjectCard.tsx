@@ -23,7 +23,9 @@ export const ProjectCard = ({
         </p>
       </div>
       <div className="p-6 flex-1 flex flex-col">
-        <p className="text-[26px]">{title}</p>
+        <p className="text-[26px]" role="heading">
+          {title}
+        </p>
         <p className="text-[15px] mt-3 text-gray-700 text-justify mb-5">
           {description}
         </p>
