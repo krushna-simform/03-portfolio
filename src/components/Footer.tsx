@@ -4,7 +4,7 @@ import { CONTACT_LINKS } from "@/data/contactLinks";
 export const Footer = () => {
   return (
     <div className="bg-[#0000FE]">
-      <div className="md:w-[60%] px-4 mx-auto py-10 mt-35">
+      <div className="md:w-[60%] px-4 mx-auto py-10 mt-10">
         <LineAttractor />
         <div className="mt-10 text-2xl">
           <p className="text-white text-2xl">Contact Me</p>
