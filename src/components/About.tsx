@@ -20,14 +20,7 @@ export const About = () => {
             </p>
             <div className="space-y-8 mt-10">
               {EDUCATION.map((education) => (
-                <Education
-                  course={education.course}
-                  institute={education.institute}
-                  city={education.city}
-                  from={education.from}
-                  to={education.to}
-                  key={education.course}
-                />
+                <Education {...education} key={education.id} />
               ))}
             </div>
           </div>
@@ -46,15 +39,7 @@ export const About = () => {
             </p>
             <div className="space-y-8 mt-10">
               {EXPERIENCE.map((experience) => (
-                <Experience
-                  company={experience.company}
-                  role={experience.role}
-                  description={experience.description}
-                  city={experience.city}
-                  from={experience.from}
-                  to={experience.to}
-                  key={experience.company}
-                />
+                <Experience {...experience} key={experience.id} />
               ))}
             </div>
           </div>
