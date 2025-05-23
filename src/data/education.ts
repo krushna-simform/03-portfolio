@@ -15,6 +15,6 @@ const EDUCATION: Array<Education> = [
     from: "2019",
     to: "2021",
   },
-];
+] as const;
 
 export { EDUCATION };
