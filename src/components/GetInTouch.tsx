@@ -31,6 +31,16 @@ export function GetInTouch() {
 
     const promise = sendMail(name, email, message);
 
+    promise.then(() => {
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      setIsNameTouched(false);
+      setIsEmailTouched(false);
+      setIsMessageTouched(false);
+    });
+
     promise.finally(() => setIsSubmitting(false));
 
     toast.promise(promise, {
