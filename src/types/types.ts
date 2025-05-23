@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface NavbarLink {
   id: number;
   label: string;
@@ -44,6 +46,13 @@ interface Project {
   techStack: Array<string>;
 }
 
+interface ContactLinks {
+  id: string;
+  link: string;
+  children: ReactNode;
+  ariaLabel: string;
+}
+
 export type {
   NavbarLink,
   ShowcaseDetails,
@@ -51,4 +60,5 @@ export type {
   Education,
   Experience,
   Project,
+  ContactLinks,
 };
