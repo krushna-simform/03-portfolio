@@ -15,7 +15,7 @@ export const Skills = () => {
               href={skill.url}
               className="h-18 md:h-22 hover:invert-20"
               target="blank"
-              key={skill.name}
+              key={skill.id}
             >
               <img
                 src={skill.path}
