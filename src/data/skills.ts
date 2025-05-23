@@ -91,6 +91,6 @@ const SKILLS: Array<Skills> = [
     path: "/icon/linux.svg",
     url: "https://www.linux.org/",
   },
-];
+] as const;
 
 export { SKILLS };
