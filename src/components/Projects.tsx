@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const Projects = () => {
   return (
-    <div className="mt-30">
+    <div className="pt-10" id="projects">
       <div className="md:w-[60%] px-4 mx-auto mt-20">
         <p className="text-[40px] font-bold" role="heading">
           Projects
