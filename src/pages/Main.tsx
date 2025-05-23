@@ -4,6 +4,7 @@ import { Projects } from "@/components/Projects";
 import { Showcase } from "@/components/Showcase";
 import { Skills } from "@/components/Skills";
 import { Footer } from "@/components/Footer";
+import { GetInTouch } from "@/components/GetInTouch";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <Skills />
       <About />
       <Projects />
+      <GetInTouch />
       <Footer />
     </>
   );
