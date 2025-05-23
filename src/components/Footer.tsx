@@ -5,12 +5,12 @@ import { IoMdMail } from "react-icons/io";
 
 export const Footer = () => {
   return (
-    <div className="h-110 bg-[#0000FE]">
-      <div className="w-[62%] mx-auto pt-10 mt-35">
+    <div className="bg-[#0000FE]">
+      <div className="md:w-[60%] px-4 mx-auto py-10 mt-35">
         <LineAttractor />
         <div className="mt-10 text-2xl">
           <p className="text-white text-2xl">Contact Me</p>
-          <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="https://www.linkedin.com/in/krushna-rathod"
               target="_blank"
