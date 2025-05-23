@@ -15,21 +15,21 @@ interface Skills {
   url: string;
 }
 
-interface Education {
-  course: string;
-  institute: string;
-  city: string;
-  from: number;
-  to: number;
-}
-
-interface Experience {
-  company: string;
-  role: string;
-  description: string;
+interface CityTimeRange {
   city: string;
   from: string;
   to: string;
+}
+
+interface Education extends CityTimeRange {
+  course: string;
+  institute: string;
+}
+
+interface Experience extends CityTimeRange {
+  company: string;
+  role: string;
+  description: string;
 }
 
 export type { NavbarLink, ShowcaseDetails, Skills, Education, Experience };
