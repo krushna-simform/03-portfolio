@@ -35,4 +35,20 @@ interface Experience extends CityTimeRange {
   description: string;
 }
 
-export type { NavbarLink, ShowcaseDetails, Skills, Education, Experience };
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  githubLink: string;
+  liveLink: string | null;
+  techStack: Array<string>;
+}
+
+export type {
+  NavbarLink,
+  ShowcaseDetails,
+  Skills,
+  Education,
+  Experience,
+  Project,
+};
