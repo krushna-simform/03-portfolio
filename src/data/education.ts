@@ -2,6 +2,7 @@ import type { Education } from "@/types/types";
 
 const EDUCATION: Array<Education> = [
   {
+    id: crypto.randomUUID(),
     course: "Bachelors in Information Technology",
     institute: "A. D. Patel Institute of Technology",
     city: "Anand",
@@ -9,6 +10,7 @@ const EDUCATION: Array<Education> = [
     to: "2025",
   },
   {
+    id: crypto.randomUUID(),
     course: "Higher Secondary Education",
     institute: "Shree M. B. Vamdom School",
     city: "Bardoli - Surat",

@@ -2,6 +2,7 @@ import { Experience } from "@/types/types";
 
 const EXPERIENCE: Array<Experience> = [
   {
+    id: crypto.randomUUID(),
     company: "Simform Software LLP.",
     role: "ReactJS Trainee",
     description:
@@ -11,6 +12,7 @@ const EXPERIENCE: Array<Experience> = [
     to: "present",
   },
   {
+    id: crypto.randomUUID(),
     company: "TatvaSoft Pvt. Ltd.",
     role: "Web Dev Trainee",
     description:
