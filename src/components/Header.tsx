@@ -8,8 +8,8 @@ const navbarLinks: Array<NavbarLink> = [
   },
   {
     id: 2,
-    label: "Education",
-    href: "#education",
+    label: "About",
+    href: "#about",
   },
   {
     id: 3,
@@ -28,11 +28,12 @@ export const Header = () => {
         <nav>
           <ul className="hidden gap-10 md:flex">
             {navbarLinks.map((navLinks) => (
-              <li
-                className="py-[11px] hover:border-b-1 cursor-pointer"
-                key={navLinks.id}
-              >
-                <a href={navLinks.href} role="button">
+              <li key={navLinks.id}>
+                <a
+                  href={navLinks.href}
+                  role="button"
+                  className="py-[13px] hover:border-b-1 cursor-pointer"
+                >
                   {navLinks.label}
                 </a>
               </li>

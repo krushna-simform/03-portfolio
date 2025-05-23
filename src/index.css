@@ -4,3 +4,7 @@
   --color-primaryBlue: #0000fe;
   --color-primaryBlack: #0a0a0a;
 }
+
+html {
+  scroll-behavior: smooth;
+}

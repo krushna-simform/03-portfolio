@@ -10,7 +10,10 @@ export const Showcase = () => {
   const size = isHovered ? 320 : 0;
 
   return (
-    <section className="relative h-[678.844px] bg-[#0A0A0A] text-white flex items-center mt-[55px] overflow-hidden">
+    <section
+      id="home"
+      className="relative h-[678.844px] bg-[#0A0A0A] text-white flex items-center mt-[55px] overflow-hidden"
+    >
       <motion.div
         className={`absolute top-0 left-0 w-full h-full z-10`}
         animate={{
