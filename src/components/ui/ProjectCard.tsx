@@ -41,7 +41,7 @@ export const ProjectCard = ({
             href={githubLink}
             target="_blank"
             aria-label={`${title} GitHub link (opens in a new tab)`}
-            className="flex items-center gap-2 bg-black py-2 px-4 rounded-sm hover:brightness-80"
+            className="flex items-center gap-2 bg-[#5756FA] py-2 px-4 rounded-sm hover:brightness-80"
             role="button"
           >
             <img src={githubLogo} alt="GitHub logo" />
@@ -54,7 +54,7 @@ export const ProjectCard = ({
               href={liveLink}
               target="_blank"
               aria-label={`${title} Deployment link (opens in a new tab)`}
-              className="flex items-center gap-2 bg-black py-2 px-4 rounded-sm hover:brightness-80"
+              className="flex items-center gap-2 bg-[#5756FA] py-2 px-4 rounded-sm hover:brightness-80"
               role="button"
             >
               <img src={linkLogo} alt="Link logo" />
