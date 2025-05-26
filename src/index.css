@@ -8,3 +8,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+.project-image-div {
+  background-image: url("/images/project-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-cols-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  place-content: center;
+}

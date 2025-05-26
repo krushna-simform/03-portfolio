@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface NavbarLink {
   id: number;
   label: string;
@@ -35,4 +37,38 @@ interface Experience extends CityTimeRange {
   description: string;
 }
 
-export type { NavbarLink, ShowcaseDetails, Skills, Education, Experience };
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  githubLink: string;
+  liveLink: string | null;
+  techStack: Array<string>;
+}
+
+interface ContactLinks {
+  id: string;
+  link: string;
+  children: ReactNode;
+  ariaLabel: string;
+}
+
+interface ContactFormState {
+  name: string;
+  email: string;
+  message: string;
+  isNameTouched: boolean;
+  isEmailTouched: boolean;
+  isMessageTouched: boolean;
+}
+
+export type {
+  NavbarLink,
+  ShowcaseDetails,
+  Skills,
+  Education,
+  Experience,
+  Project,
+  ContactLinks,
+  ContactFormState,
+};

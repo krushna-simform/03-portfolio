@@ -40,9 +40,13 @@ export const Header = () => {
             ))}
           </ul>
         </nav>
-        <button className="bg-primaryBlue text-[13px] h-[34px] w-[125.6px] flex items-center justify-center rounded-[4px] cursor-pointer hover:brightness-90">
+        <a
+          className="bg-primaryBlue text-[13px] h-[34px] w-[125.6px] flex items-center justify-center rounded-[4px] cursor-pointer hover:brightness-90"
+          href="#getInTouch"
+          role="button"
+        >
           GET IN TOUCH
-        </button>
+        </a>
       </div>
     </header>
   );
