@@ -1,6 +1,6 @@
 import type { Education } from "@/types/types";
 
-const EDUCATION: Array<Education> = [
+export const EDUCATION: Array<Education> = [
   {
     id: crypto.randomUUID(),
     course: "Bachelors in Information Technology",
@@ -18,5 +18,3 @@ const EDUCATION: Array<Education> = [
     to: "2021",
   },
 ] as const;
-
-export { EDUCATION };

@@ -1,6 +1,6 @@
 import { Skills } from "@/types/types";
 
-const SKILLS: Array<Skills> = [
+export const SKILLS: Array<Skills> = [
   {
     id: crypto.randomUUID(),
     name: "html",
@@ -110,5 +110,3 @@ const SKILLS: Array<Skills> = [
     url: "https://www.linux.org/",
   },
 ] as const;
-
-export { SKILLS };

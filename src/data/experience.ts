@@ -1,6 +1,6 @@
 import { Experience } from "@/types/types";
 
-const EXPERIENCE: Array<Experience> = [
+export const EXPERIENCE: Array<Experience> = [
   {
     id: crypto.randomUUID(),
     company: "Simform Software LLP.",
@@ -22,5 +22,3 @@ const EXPERIENCE: Array<Experience> = [
     to: "June 2024",
   },
 ] as const;
-
-export { EXPERIENCE };

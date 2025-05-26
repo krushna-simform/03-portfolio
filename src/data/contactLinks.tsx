@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-const CONTACT_LINKS: Array<ContactLinks> = [
+export const CONTACT_LINKS: Array<ContactLinks> = [
   {
     id: crypto.randomUUID(),
     link: "https://www.linkedin.com/in/krushna-rathod",
@@ -35,5 +35,3 @@ const CONTACT_LINKS: Array<ContactLinks> = [
     ariaLabel: "Mail",
   },
 ] as const;
-
-export { CONTACT_LINKS };

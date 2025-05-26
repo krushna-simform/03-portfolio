@@ -1,6 +1,6 @@
 import { Project } from "@/types/types";
 
-const PROJECT: Array<Project> = [
+export const PROJECT: Array<Project> = [
   {
     id: crypto.randomUUID(),
     title: "Slack Skeleton UI",
@@ -125,5 +125,3 @@ const PROJECT: Array<Project> = [
     techStack: ["React"],
   },
 ] as const;
-
-export { PROJECT };
