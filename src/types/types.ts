@@ -53,6 +53,15 @@ interface ContactLinks {
   ariaLabel: string;
 }
 
+interface ContactFormState {
+  name: string;
+  email: string;
+  message: string;
+  isNameTouched: boolean;
+  isEmailTouched: boolean;
+  isMessageTouched: boolean;
+}
+
 export type {
   NavbarLink,
   ShowcaseDetails,
@@ -61,4 +70,5 @@ export type {
   Experience,
   Project,
   ContactLinks,
+  ContactFormState,
 };
