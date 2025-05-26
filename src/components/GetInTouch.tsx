@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { toast } from "sonner";
 import {
   validateName,
@@ -6,21 +6,22 @@ import {
   validateMessage,
 } from "@/utils/validations";
 import { sendMail } from "@/utils/sendEmail";
+import {
+  contactFormReducer,
+  contactFormInitialState,
+} from "@/utils/contactForm";
 
 export function GetInTouch() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [contactForm, dispatch] = useReducer(
+    contactFormReducer,
+    contactFormInitialState
+  );
 
-  const [isNameTouched, setIsNameTouched] = useState(false);
-  const [isEmailTouched, setIsEmailTouched] = useState(false);
-  const [isMessageTouched, setIsMessageTouched] = useState(false);
-
-  const nameError = validateName(name);
-  const emailError = validateEmail(email);
-  const messageError = validateMessage(message);
+  const nameError = validateName(contactForm.name);
+  const emailError = validateEmail(contactForm.email);
+  const messageError = validateMessage(contactForm.message);
 
   const formErrors = isSubmitting || nameError || emailError || messageError;
 
@@ -31,17 +32,13 @@ export function GetInTouch() {
 
     setIsSubmitting(true);
 
-    const promise = sendMail(name, email, message);
+    const promise = sendMail(
+      contactForm.name.trim(),
+      contactForm.email.trim(),
+      contactForm.message.trim()
+    );
 
-    promise.then(() => {
-      setName("");
-      setEmail("");
-      setMessage("");
-
-      setIsNameTouched(false);
-      setIsEmailTouched(false);
-      setIsMessageTouched(false);
-    });
+    promise.then(() => dispatch({ type: "RESET" }));
 
     promise.finally(() => setIsSubmitting(false));
 
@@ -73,20 +70,22 @@ export function GetInTouch() {
                 required
                 aria-required
                 type="text"
-                value={name}
+                value={contactForm.name}
                 onChange={(e) => {
-                  setName(e.currentTarget.value);
-                  setIsNameTouched(true);
+                  dispatch({
+                    type: "SET_NAME",
+                    payload: e.currentTarget.value,
+                  });
                 }}
                 placeholder="Enter Your Name"
                 className={`border border-gray h-10 rounded-lg pl-3 ${
-                  isNameTouched && nameError
+                  contactForm.isNameTouched && nameError
                     ? "focus:outline-none focus:border-red-500"
                     : ""
                 }`}
               />
               <span className="text-sm text-red-500">
-                {isNameTouched && nameError}
+                {contactForm.isNameTouched && nameError}
               </span>
             </div>
             <div className="flex flex-col">
@@ -99,20 +98,22 @@ export function GetInTouch() {
                 required
                 aria-required
                 type="email"
-                value={email}
+                value={contactForm.email}
                 onChange={(e) => {
-                  setEmail(e.currentTarget.value);
-                  setIsEmailTouched(true);
+                  dispatch({
+                    type: "SET_EMAIL",
+                    payload: e.currentTarget.value,
+                  });
                 }}
                 placeholder="Enter Your Email"
                 className={`border border-gray h-10 rounded-lg pl-3 ${
-                  isEmailTouched && emailError
+                  contactForm.isEmailTouched && emailError
                     ? "focus:outline-none focus:border-red-500"
                     : ""
                 }`}
               />
               <span className="text-sm text-red-500">
-                {isEmailTouched && emailError}
+                {contactForm.isEmailTouched && emailError}
               </span>
             </div>
             <div className="flex flex-col">
@@ -124,20 +125,22 @@ export function GetInTouch() {
                 id="message"
                 required
                 aria-required
-                value={message}
+                value={contactForm.message}
                 onChange={(e) => {
-                  setMessage(e.currentTarget.value);
-                  setIsMessageTouched(true);
+                  dispatch({
+                    type: "SET_MESSAGE",
+                    payload: e.currentTarget.value,
+                  });
                 }}
                 placeholder="How can I help ?"
                 className={`border border-gray rounded-lg p-3 min-h-36 ${
-                  isMessageTouched && messageError
+                  contactForm.isMessageTouched && messageError
                     ? "focus:outline-none focus:border-red-500"
                     : ""
                 }`}
               ></textarea>
               <span className="text-sm text-red-500">
-                {isMessageTouched && messageError}
+                {contactForm.isMessageTouched && messageError}
               </span>
             </div>
             <button
