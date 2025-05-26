@@ -22,6 +22,8 @@ export function GetInTouch() {
   const emailError = validateEmail(email);
   const messageError = validateMessage(message);
 
+  const formErrors = isSubmitting || nameError || emailError || messageError;
+
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
@@ -139,9 +141,7 @@ export function GetInTouch() {
               </span>
             </div>
             <button
-              disabled={Boolean(
-                isSubmitting || nameError || emailError || messageError
-              )}
+              disabled={Boolean(formErrors)}
               className="bg-primaryBlue text-white w-fit py-2 px-6 font-bold rounded-lg not-disabled:hover:brightness-80 not-disabled:cursor-pointer disabled:opacity-70"
             >
               Submit
